@@ -3,6 +3,8 @@ import sequelize from './config/database';
 import authenticate from './middleware/authenticate';
 import authRoutes from './routes/auth';
 import peopleRoutes from './routes/people';
+import booksRoutes from './routes/books';
+import unitsRoutes from './routes/units';
 import dotenv from 'dotenv';
 
 import errorHandler from './middleware/errorHandler';
@@ -13,6 +15,8 @@ const app = express();
 app.use(express.json());
 app.use('/api/auth', authRoutes);
 app.use('/api/people', authenticate, peopleRoutes);
+app.use('/api/books', authenticate, booksRoutes);
+app.use('/api/copies', authenticate, unitsRoutes);
 
 app.use(errorHandler);
 
