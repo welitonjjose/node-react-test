@@ -1,5 +1,7 @@
 import { DataTypes, Model } from 'sequelize';
 import sequelize from '../config/database';
+import Loan from './Loan';
+import Book from './Books';
 
 class People extends Model {
   public id!: number;
@@ -61,5 +63,11 @@ People.init({
   sequelize,
   tableName: 'people'
 });
+
+People.hasMany(Loan, {
+  foreignKey: 'peopleId',
+  as: 'loans',
+});
+
 
 export default People;

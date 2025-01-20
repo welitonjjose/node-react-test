@@ -1,5 +1,6 @@
 import { Model, DataTypes } from 'sequelize';
 import sequelize from '../config/database'; // Adjust the path as necessary
+import Loan from './Loan';
 
 class Book extends Model {
   public id!: number;
@@ -41,5 +42,10 @@ Book.init(
     tableName: 'books',
   }
 );
+
+// Book.hasMany(Loan, {
+//   foreignKey: 'bookId',
+//   as: 'loans',
+// });
 
 export default Book;

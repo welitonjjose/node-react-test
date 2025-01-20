@@ -1,7 +1,8 @@
 'use client';
 
 import { useEffect } from 'react';
-import { isLogged } from '../util/autenticate';
+import { isLogged } from '@/util/autenticate';
+import Form from '@/components/people/form'
 
 
 export default function Homepage() {
@@ -14,7 +15,7 @@ export default function Homepage() {
   return (
     <div>
       <h1>About Us</h1>
-      <p>Welcome to our website! This is the About page.</p>
+      <Form />
     </div>
   );
 }

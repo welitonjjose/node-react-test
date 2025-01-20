@@ -1,49 +1,61 @@
-### FCamara
-*"Queremos ser como uma árvore, crescer um pouco todos os dias e tentar tocar o céu, sem perder a solidez de nossas raízes." Conheça:* [www.fcamara.com.br](http://www.fcamara.com.br "www.fcamara.com.br")
+# Biblioteca
 
-### Teste para vaga desenvolvedor node.js/react.js
-------------
-Criar um sistema de controle de aluguel livros em uma biblioteca. 
-Dados: 
-- um livro pode ter varias copias
-- uma copia não pode estar com mais de uma pessoa ao mesmo tempo
+## Descrição
 
-Todos os campos são obrigatórios.
-### Cadastro de Pessoa
-- Nome
-- CPF
-- Data Nascimento
-- Endereço completo
+Este projeto é uma aplicação que gerencia empréstimos e informações de pessoas. Ele permite que os usuários registrem, visualizem e gerenciem empréstimos, além de associar esses empréstimos a pessoas específicas. A aplicação utiliza o Sequelize como ORM para interagir com o banco de dados.
 
-### Cadastro de Livro
-- Titulo
-- Autor
-- ISBN
-- Código da cópia
+## Funcionalidades
 
-### Funcionalidades
-- Pessoa: CRUD
-- Livro: CRUD
-- Copia: CRUD
-- Controle de aluguel
+- **Gerenciamento de Empréstimos**: Criação, leitura, atualização e exclusão de registros de empréstimos.
+- **Gerenciamento de Pessoas**: Criação, leitura, atualização e exclusão de registros de pessoas.
+- **Relação entre Empréstimos e Pessoas**: Cada empréstimo pode ser associado a uma pessoa, permitindo um melhor controle e organização.
 
-### Requisitos
-- Persistencia utlizando banco de dados relacional open source (MySQL, Postgresql, Firebird, etc..) de sua preferencia
-- RESTful JSON
-- Autenticacao JWT
-- Front-End deve ser responsivo (pelo menos desktop e celular), ter pelo menos uma tela modal, um menu lateral que expande, não usar bootstrap e jquery
-- Listar o titulo dos 3 livros que mais tiveram atraso na devolução por mes durante o ano (mostrar todos os meses do ano)
-- Listar o titulo dos 3 livros mais alugados por cidade durante o ano (mostrar todos os meses do ano)
-- Se pessoa atrasou devolução mais de 2x ela não pode alugar mais
-- Criar README do projeto descrevendo as tecnologias utilizadas, chamadas dos serviços e configurações necessário para executar a aplicação
+## Tecnologias Utilizadas
 
-### Submissão
-------------
-Crie um fork do teste para acompanharmos o seu desenvolvimento através dos seus commits.
+- **Node.js**: Ambiente de execução para JavaScript no lado do servidor.
+- **Express**: Framework para construção de APIs e aplicações web.
+- **Sequelize**: ORM para Node.js que facilita a interação com bancos de dados SQL.
+- **SQLite**: Sistema de gerenciamento de banco de dados relacional utilizado para armazenar os dados.
 
-### Obrigado
-------------
-Agradecemos sua participação no teste. Boa sorte!
+## Instalação
 
+1. Clone o repositório:
+   ```bash
+   git clone https://github.com/seu-usuario/nome-do-projeto.git
+   ```
+
+2. Navegue até o diretório do projeto:
+   ```bash
+   cd nome-do-projeto
+   ```
+
+3. Instale as dependências:
+   ```bash
+   npm install
+   ```
+
+4. O SQLite não requer configuração de banco de dados, mas você pode ajustar as configurações no arquivo de configuração (ex: `config/database.js`) se necessário.
+
+5. Execute as migrações para criar as tabelas no banco de dados:
+   ```bash
+   npx sequelize-cli db:migrate
+   ```
+
+6. Inicie o servidor:
+   ```bash
+   npm start
+   ```
+
+## Uso
+
+Após iniciar o servidor, você pode acessar a API através de `http://localhost:3000`. Utilize ferramentas como Postman ou Insomnia para testar os endpoints disponíveis.
+
+## Test
+
+Link para executar via postman
+
+```
+https://app.getpostman.com/join-team?invite_code=1a539a959519597146ab90d8be45a84bf34ddadc2b8f81ce22c7c136d0796027
+```
 
 

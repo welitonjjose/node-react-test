@@ -1,7 +1,6 @@
 import { Router } from 'express';
 import People from '../models/People';
 
-
 const router = Router();
 
 // Criar uma nova pessoa
