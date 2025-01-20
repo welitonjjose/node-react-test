@@ -11,9 +11,9 @@ router.post('/register', async (req, res) => {
   const hashedPassword = await bcrypt.hash(password, 10);
   try {
     await User.create({ username, password: hashedPassword });
-    res.status(201).json({ message: 'Usuário criado com sucesso!' });
+    res.status(201).json({ success: true, message: 'Usuário criado com sucesso!' });
   } catch (error) {
-    res.status(400).json({ error: 'Erro ao criar usuário.' });
+    res.status(400).json({ success: false, error: 'Erro ao criar usuário.' });
   }
 });
 

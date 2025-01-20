@@ -6,12 +6,14 @@ import peopleRoutes from './routes/people';
 import booksRoutes from './routes/books';
 import unitsRoutes from './routes/units';
 import dotenv from 'dotenv';
+import cors from 'cors';
 
 import errorHandler from './middleware/errorHandler';
 
 dotenv.config();
 
 const app = express();
+app.use(cors());
 app.use(express.json());
 app.use('/api/auth', authRoutes);
 app.use('/api/people', authenticate, peopleRoutes);
