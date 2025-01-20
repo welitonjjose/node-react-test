@@ -58,4 +58,78 @@ Link para executar via postman
 https://app.getpostman.com/join-team?invite_code=1a539a959519597146ab90d8be45a84bf34ddadc2b8f81ce22c7c136d0796027
 ```
 
+## Endpoints
+ ### Autenticação
+- **POST /auth/login**
+  - Descrição: Realiza o login de um usuário. O corpo da requisição deve conter as credenciais (ex: username e senha).
+
+- **POST /auth/register**
+  - Descrição: Registra um novo usuário. O corpo da requisição deve conter os dados do usuário (ex: username, senha).
+
+
+### People
+
+- **GET /api/people**
+  - Descrição: Retorna uma lista de todas as pessoas cadastradas.
+  
+- **GET /api/people/:id**
+  - Descrição: Retorna os detalhes de uma pessoa específica pelo ID.
+
+- **POST /api/people**
+  - Descrição: Cria uma nova pessoa. O corpo da requisição deve conter os dados da pessoa (ex: nome, endereco).
+
+- **PUT /api/people/:id**
+  - Descrição: Atualiza os dados de uma pessoa específica pelo ID. O corpo da requisição deve conter os novos dados.
+
+- **DELETE /api/people/:id**
+  - Descrição: Remove uma pessoa específica pelo ID.
+  - 
+  
+### Livros
+
+- **GET /api/books**
+  - Descrição: Retorna uma lista de todos os livros cadastrados.
+
+- **GET /api/books/:id**
+  - Descrição: Retorna os detalhes de um livro específico pelo ID.
+
+- **POST /api/books**
+  - Descrição: Cria um novo livro. O corpo da requisição deve conter os dados do livro (ex: título, autor, ano de publicação).
+
+- **PUT /api/books/:id**
+  - Descrição: Atualiza os dados de um livro específico pelo ID. O corpo da requisição deve conter os novos dados.
+
+- **DELETE /api/books/:id**
+  - Descrição: Remove um livro específico pelo ID.
+
+### Cópias
+
+- **GET /api/copies**
+  - Descrição: Retorna uma lista de todas as cópias cadastradas.
+
+- **GET /api/copies/:id**
+  - Descrição: Retorna os detalhes de uma cópia específica pelo ID.
+
+- **POST /api/copies**
+  - Descrição: Cria uma nova cópia de um livro. O corpo da requisição deve conter os dados da cópia (ex: ID do livro, status).
+
+- **PUT /api/copies/:id**
+  - Descrição: Atualiza os dados de uma cópia específica pelo ID. O corpo da requisição deve conter os novos dados.
+
+- **DELETE /api/copies/:id**
+  - Descrição: Remove uma cópia específica pelo ID.
+
+### Loan
+
+- **GET /api/loan/report**
+  - Descrição: Retorna uma lista de todos os empréstimos dos 3 livros mais emprestados por cada mes.
+
+- **GET /api/loan/:id**
+  - Descrição: Retorna os detalhes de um empréstimo específico pelo ID.
+
+- **POST /api/loan**
+  - Descrição: Cria um novo empréstimo. O corpo da requisição deve conter os dados do empréstimo (ex: pessoal e book).
+
+- **PUT /api/loan/:id/return**
+  - Descrição: Devolucao do livreo emprestado.
 
